@@ -239,11 +239,20 @@ body {
 }
 
 .registro__intro p {
-  margin: 0 0 2.5rem;
+  margin: 0 0 1rem;
   color: var(--gris);
   font-size: 1rem;
-  line-height: 1.6;
-  max-width: 52ch;
+  line-height: 1.65;
+  max-width: 62ch;
+}
+
+.registro__intro p strong {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.registro__intro p:last-of-type {
+  margin-bottom: 2.5rem;
 }
 
 .form {
