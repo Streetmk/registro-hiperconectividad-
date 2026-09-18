@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registro · Hiperconectividad: la era de la desconexión</title>
+<meta name="description" content="Registro gratuito al curso Hiperconectividad: la era de la desconexión. Sábado 10 de octubre, 8:30 h, Auditorio de la Universidad del Golfo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="pagina">
+
+  <!-- ===== Panel del evento ===== -->
+  <aside class="evento">
+    <div class="evento__foto">
+      <img src="fondo-evento.jpg" alt="" role="presentation">
+    </div>
+
+    <header class="evento__marca">
+      <p class="evento__division">División de Estudios de Posgrado e Investigación</p>
+      <p class="evento__programa">Maestría en Ciencias Administrativas con Especialidad en Relaciones Industriales · Universidad del Golfo</p>
+    </header>
+
+    <div class="evento__titulo">
+      <h1>Hiperconectividad</h1>
+      <p class="evento__subtitulo">La era de la desconexión</p>
+    </div>
+
+    <div class="evento__bloque">
+      <div class="evento__fecha">
+        <span class="fecha__dia">Sábado</span>
+        <span class="fecha__numero">10.oct</span>
+        <span class="fecha__hora">8:30</span>
+        <span class="fecha__gratis">Evento gratuito</span>
+      </div>
+      <div class="evento__lugar">
+        <p class="lugar__sede">Auditorio de la Universidad del Golfo</p>
+        <p class="lugar__nombre">“Heriberto N. Florencia Florencia”</p>
+        <p class="lugar__transmision">También en vivo por Facebook</p>
+        <ul class="lugar__redes">
+          <li>/UDELGTAMPICO/</li>
+          <li>/posgrado.golfo/</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="evento__nota">Al terminar el curso se entrega constancia de participación. Tu nombre aparecerá tal como lo escribas en el formulario.</p>
+  </aside>
+
+  <!-- ===== Formulario ===== -->
+  <main class="registro">
+    <div class="registro__intro">
+      <h2>Aparta tu lugar</h2>
+      <p>El cupo del auditorio es limitado. Llena los datos y recibirás la confirmación de tu registro.</p>
+    </div>
+
+    <form id="formRegistro" class="form" novalidate>
+
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="name" required
+               placeholder="Como quieres que aparezca en tu constancia">
+        <p class="campo__error" data-error="nombre"></p>
+      </div>
+
+      <div class="campo campo--doble">
+        <div>
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required
+                 placeholder="tucorreo@ejemplo.com">
+          <p class="campo__error" data-error="correo"></p>
+        </div>
+        <div>
+          <label for="telefono">Teléfono <span class="label__opcional">opcional</span></label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+                 placeholder="833 000 0000">
+        </div>
+      </div>
+
+      <div class="campo campo--doble">
+        <div>
+          <label for="institucion">Institución o empresa</label>
+          <input type="text" id="institucion" name="institucion" required
+                 placeholder="Universidad del Golfo">
+          <p class="campo__error" data-error="institucion"></p>
+        </div>
+        <div>
+          <label for="puesto">Puesto o carrera</label>
+          <input type="text" id="puesto" name="puesto" required
+                 placeholder="Estudiante, docente, RH…">
+          <p class="campo__error" data-error="puesto"></p>
+        </div>
+      </div>
+
+      <fieldset class="campo campo--opciones">
+        <legend>¿Cómo vas a participar?</legend>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="modalidad" value="Presencial" checked>
+            <span class="opcion__caja">
+              <span class="opcion__titulo">En el auditorio</span>
+              <span class="opcion__detalle">Llega 8:00 para registro en puerta</span>
+            </span>
+          </label>
+          <label class="opcion">
+            <input type="radio" name="modalidad" value="Facebook Live">
+            <span class="opcion__caja">
+              <span class="opcion__titulo">Por Facebook Live</span>
+              <span class="opcion__detalle">Te enviamos la liga por correo</span>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="campo">
+        <label for="medio">¿Por dónde te enteraste?</label>
+        <select id="medio" name="medio">
+          <option value="Facebook">Facebook</option>
+          <option value="Instagram">Instagram</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Flyer impreso">Flyer impreso</option>
+          <option value="Un alumno o docente">Un alumno o docente</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="comentarios">¿Qué te gustaría que se tocara en el curso? <span class="label__opcional">opcional</span></label>
+        <textarea id="comentarios" name="comentarios" rows="3"
+                  placeholder="Dudas o temas que te interesan sobre hiperconectividad"></textarea>
+      </div>
+
+      <label class="aviso">
+        <input type="checkbox" id="aviso" name="aviso" required>
+        <span>Acepto que mis datos se usen para el control de asistencia y el envío de la constancia.</span>
+      </label>
+      <p class="campo__error" data-error="aviso"></p>
+
+      <button type="submit" class="boton" id="botonEnviar">Registrarme</button>
+
+      <p class="form__estado" id="estado" role="status" aria-live="polite"></p>
+    </form>
+
+    <!-- Pantalla de confirmación -->
+    <div class="exito" id="exito" hidden>
+      <p class="exito__marca">Registro confirmado</p>
+      <h2 id="exitoNombre">Listo</h2>
+      <p class="exito__texto">Te esperamos el sábado 10 de octubre a las 8:30 en el Auditorio “Heriberto N. Florencia Florencia”. Guarda este dato: el registro en puerta cierra a las 8:25.</p>
+      <button type="button" class="boton boton--claro" id="otroRegistro">Registrar a otra persona</button>
+    </div>
+  </main>
+</div>
+
+<script src="registro.js"></script>
+</body>
+</html>
